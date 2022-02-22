@@ -1,6 +1,5 @@
 import React from 'react';
-import { StatusBar } from "expo-status-bar";
-import { SafeAreaView, ScrollView, StyleSheet, Text, View, Image, ImageBackground } from "react-native";
+import { StatusBar, SafeAreaView, ScrollView, StyleSheet, Text, View, Image, ImageBackground } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import { RectButton } from 'react-native-gesture-handler';
 import { LinearGradient } from "expo-linear-gradient";
@@ -11,12 +10,14 @@ import logoImg from '../../../assets/logo.png';
 import BackgroundImg from '../../../assets/backgroundImg.jpeg';
 import friendsImg from '../../../assets/friendsImg.png';
 
+import { styles } from './styles';
+
 export default function Home() {
   const navigation = useNavigation();
 
   return (
     <>
-      <StatusBar style="light" translucent />
+      <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
       <SafeAreaView style={styles.safeArea}>
         <ScrollView>
 
@@ -53,7 +54,7 @@ export default function Home() {
                   <Text style={styles.infoText}>Doe e torne a vida de um pet mais feliz.</Text>
 
                   <View style={styles.button}>
-                    <RectButton style={styles.buttonIcon} onPress={() => navigation.navigate('SignUp')}>
+                    <RectButton style={styles.buttonIcon} onPress={() => navigation.navigate('SignIn')}>
                       <Feather name="arrow-right" size={24} color="#000" />
                     </RectButton>
                   </View>
@@ -68,76 +69,3 @@ export default function Home() {
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  safeArea: {
-    backgroundColor: "#000",
-  },
-
-  header: {
-    flex: 1,
-    marginTop: 20,
-    marginBottom: 30,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between'
-
-  },
-
-  container: {
-    flex: 1,
-  },
-
-  content: {
-    padding: 20,
-  },
-
-  infoText: {
-    fontSize: 48,
-    color: '#fff',
-  },
-
-  grid: {
-    paddingVertical: 30,
-    flexDirection: 'row',
-    justifyContent: 'center',
-  },
-
-  friendsImg: {
-    width: 300,
-    height: 300,
-    borderRadius: 8,
-  },
-
-  button: {
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-
-  buttonIcon: {
-    backgroundColor: '#00C9FF',
-    height: 80,
-    width: 80,
-    borderRadius: 30,
-    overflow: 'hidden',
-    marginTop: 24,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  backgroundImg: {
-    resizeMode: 'cover',
-    alignItems: 'center',
-    justifyContent: 'center'
-
-  },
-
-  linearGradient: {
-    width: '100%',
-    height: '100%',
-    opacity: 0.75,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-
-});
