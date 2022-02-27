@@ -15,8 +15,8 @@ export default function SignIn() {
       <StatusBar style="light" translucent />
       <SafeAreaView style={styles.safeArea}>
         <ScrollView>
+          <Image source={signUpImg} style={styles.signUpImg} />
           <View style={styles.container}>
-            <Image source={signUpImg} style={styles.signUpImg} />
             <TextInput
               style={styles.input}
               onChangeText={onChangeMailText}

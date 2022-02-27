@@ -14,6 +14,7 @@ export const styles = StyleSheet.create({
   },
 
   signUpImg: {
+    backgroundColor: '#F0F0F5',
     width: '100%',
     height: 350,
   },
