@@ -1,0 +1,59 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "global-require": "off",
+      "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "import/prefer-default-export": "off",
+      "react/jsx-one-expression-per-line": "off",
+      "react/jsx-props-no-spreading": "off",
+      "react/prop-types": "off",
+      "camelcase": "off",
+      "@typescript-eslint/camelcase": "off",
+      "import/no-duplicates": "off",
+      "@typescript-eslint/ban-types": "off",
+      "@typescript-eslint/class-name-casing": "off",
+      "eqeqeq": "off",
+      "curly": "error",
+      "quotes": ["error", "single"],
+      "@typescript-eslint/explicit-function-return-type": [
+        "error",
+        {
+          "allowExpressions": true
+        }
+      ],
+      "settings": {
+        "import/core-modules": [
+          "@expo/vector-icons"
+        ]
+      },
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "ts": "never",
+          "tsx": "never"
+        }
+      ]
+    }
+}
