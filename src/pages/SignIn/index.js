@@ -1,10 +1,19 @@
-import React from 'react';
-import { StatusBar } from "expo-status-bar";
-import { SafeAreaView, ScrollView, Text, View, Image, TextInput, TouchableOpacity, Alert } from "react-native";
+import React from "react";
+import {
+  StatusBar,
+  SafeAreaView,
+  ScrollView,
+  Text,
+  View,
+  Image,
+  TextInput,
+  TouchableOpacity,
+  Alert,
+} from "react-native";
 
-import signUpImg from '../../../assets/signUpImg.png'
+import SignUpImg from "../../../assets/god-doggy.svg";
 
-import { styles } from './styles';
+import { styles } from "./styles";
 
 export default function SignIn() {
   const [mailText, onChangeMailText] = React.useState("E-mail");
@@ -12,11 +21,12 @@ export default function SignIn() {
 
   return (
     <>
-      <StatusBar style="light" translucent />
+      <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.safeArea}>
         <ScrollView>
-          <Image source={signUpImg} style={styles.signUpImg} />
           <View style={styles.container}>
+
+            <SignUpImg width={600} height={400} />
             <TextInput
               style={styles.input}
               onChangeText={onChangeMailText}
@@ -31,24 +41,25 @@ export default function SignIn() {
 
             <TouchableOpacity
               style={styles.buttonForm}
-              onPress={() => Alert.alert('Você poderá realizar login em breve.')}>
+              onPress={() =>
+                Alert.alert("Você poderá realizar login em breve.")
+              }
+            >
               <Text style={styles.buttonText}>Entrar</Text>
             </TouchableOpacity>
 
             <Text style={styles.recoveryPassword}>Esqueci minha senha</Text>
             <Text style={styles.recoveryPassword}> ou</Text>
 
-
             <TouchableOpacity
               style={styles.buttonFormSignUp}
-              onPress={() => Alert.alert('Você poderá cadastar-se em breve.')}>
+              onPress={() => Alert.alert("Você poderá cadastar-se em breve.")}
+            >
               <Text style={styles.buttonText}>Cadastra-se</Text>
             </TouchableOpacity>
-
-
           </View>
         </ScrollView>
       </SafeAreaView>
     </>
-  )
+  );
 }

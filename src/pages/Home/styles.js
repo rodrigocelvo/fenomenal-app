@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   safeArea: {
-    backgroundColor: "#000",
+    backgroundColor: '#000000',
   },
 
   header: {
@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
     marginBottom: 30,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
 
   },
 
@@ -42,7 +42,7 @@ export const styles = StyleSheet.create({
 
   button: {
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
 
   buttonIcon: {
@@ -59,7 +59,7 @@ export const styles = StyleSheet.create({
   backgroundImg: {
     resizeMode: 'cover',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
 
   },
 
@@ -68,7 +68,7 @@ export const styles = StyleSheet.create({
     height: '100%',
     opacity: 0.75,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
 
 });

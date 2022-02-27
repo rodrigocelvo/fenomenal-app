@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   safeArea: {
-    backgroundColor: "#000",
+    backgroundColor: "#F0F0F5",
   },
 
   container: {
@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
 
   signUpImg: {
     backgroundColor: '#F0F0F5',
-    width: '100%',
+    width: 740,
     height: 350,
   },
 
@@ -48,7 +48,7 @@ export const styles = StyleSheet.create({
     color: '#fff',
     textAlign: 'center',
     fontSize: 16,
-  }, 
+  },
 
   recoveryPassword: {
     marginVertical: 20,
